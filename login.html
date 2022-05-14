@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Fz</title>
+
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+</head>
+<body>
+	<nav class="navbar background h-nav-resp">
+		<ul class="nav-list v-class-resp">
+		<div class="logo">
+			<img src="image1.jpg" alt="ïmg" >
+		</div>
+
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About Us</a></li>
+		<li><a href="service.html">Services</a></li>
+		<li><a href="contact.html">Contact Us</a></li>
+		<li><a href="login.html">Login</a></li>
+	 <li><a  href="address.html" style="color: red;" ><i class="fa fa-map-marker" aria-hidden="true"></i>Select your address</a></li>
+
+	</ul>
+
+	<div class="rightNav v-class-resp">
+		<input  type="text" name="search" id="search1">
+		<button class="btn2search">Search</button>
+	</div>
+	<div class="burger">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+
+	</div>
+</nav>
+
+<div class="feed">
+	
+	<div class="feed_form">
+           <form name="submit-googlesheet" method="post">
+           	<input type="email" name="Email" placeholder="Email ID"><br>
+           	<input type="password" name="password" placeholder="password"><br>
+            <br>
+        	<button type="submit">Sign in</button>
+           	<p>Don't have an account ? <a href="#">Sign up</a></p>
+           </form>
+	</div>
+</div>
+
+
+<div class="buynow" style="padding-top: 100px;">
+<h2>Explore Your denim</h2>
+		<div class="buynow_container" style="padding-bottom: 50px;">
+
+			<div class="itemnow">
+				<div class="itemnow_img">
+					<img src="buy1.jpg">
+				</div>
+				<div class="itemnow_content">
+					<h3>PLANE DENIM</h3>
+					<p>Raw or unwashed denim is a fabric that is not washed after the dying process. It is stiff to the touch nd smooth .<br></p>
+					<a href="buy.html">Buy Now</a>
+				</div>
+
+			</div>
+			<div class="itemnow">
+				<div class="itemnow_img">
+					<img src="buy2.jpg" >
+				</div>
+				<div class="itemnow_content">
+					<h3>CLASSIC DENIM</h3>
+					<p>Get comfort, durability, and great styling smooth to touch and smooth for trend also for the look cool in everywhere<br></p>
+					<a href="buy.html">Buy Now</a>
+				</div>
+
+		</div>		
+	<div class="itemnow">
+				<div class="itemnow_img">
+					<img src="buy3.jpg">
+				</div>
+				<div class="itemnow_content">
+					<h3>ROUGH DENIM</h3>
+					<p>Denim is a sturdy and durable fabric, which is woven in a manner that it can be effortlessly worn in rough .</p>
+					<a href="buy.html">Buy Now</a>
+				</div>
+
+				</div>
+			<div class="itemnow">
+				<div class="itemnow_img">
+					<img src="buy4.jpg" >
+				</div>
+				<div class="itemnow_content">
+					<h3>BLACK CLASSIC DENIM</h3>
+					<p> Made for the bold and the confident. The unmistakably intense and woody accord of Patchouli, Sandalwood  .</p>
+	
+					<a href="buy.html">Buy Now</a>
+				</div>
+		
+
+
+
+				</div>
+
+
+				
+			</div>
+
+		
+	
+
+		<div class="buy">
+		<a href="service.html">Explore Our Products</a>
+	</div>
+
+	</div>
+
+	<hr>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<script>
+   const scriptURL = 'https://script.google.com/macros/s/AKfycbzUhMV4vJvfUkOT21LwBcre0CGNWHtEZhlnqUYnKHna6EAmqTq_jVISk4cadtKHsLqO/exec'
+   const form = document.forms['submit-googlesheet']
+
+   form.addEventListener('submit', e => {
+       e.preventDefault()
+       fetch(scriptURL, {
+               method: 'POST',
+               body: new FormData(form)
+           })
+           .then(response => alert(
+               "Thanks for you will get back to you soon.. "))
+           .catch(error => console.error('Error!', error.message))
+   })
+
+</script>
+
+<footer>
+	<div class="footer_logo">
+		<a href="#"><img src="logo.jpg" width="150"></a>
+
+	</div>
+	<div class="pages">
+		<h3>Pages</h3>
+		<a href="about.html">About us</a>|
+		<a href="service.html">Services</a>|
+		<a href="blogs.html">Blogs</a>|
+		<a href="login.html">Login</a>|
+		<a href="sign.html">Sign Up</a>
+	</div>           
+	<div class="doc">
+		<h3>Documents</h3>
+		<a href="">Privacy Policy</a>|
+		<a href="">Terms of use</a>|
+		<a href="">Refund Policy</a>
+	</div>
+	<div class="social">
+		<h3>Follow us</h3>
+		<a href="https://www.facebook.com/fawaaz.sarafolu.9" target="_black"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+	    <a href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+		<a href="https://www.instagram.com/fawaaz_sarafolu/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+		<a href="https://twitter.com/home"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			</div>
+			<div class="contact">
+				<h3>Contact Us</h3>
+				<a href="http: //api.Whatsapp.com/send?phone:=+9818130492" target="_black "><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+				<a href="tel: 9818130492"><i class="fa fa-phone" aria-hidden="true"></i></a>
+				<a href="mailto: sarafolufawaaz@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+
+			</div>
+			<hr>
+			<p>Copyright &copy; 2021 1stop.All right reserved</p>
+</footer>
+<script src="resp.js"></script>
+
+
+
+
+
+</body>
+</html>
+
